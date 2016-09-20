@@ -54,7 +54,18 @@ class ProductTest < ActiveSupport::TestCase
                           price:        1,
                           image_url:    "url.jpg")
     assert product.invalid?
-    assert_equal [I18n.translate('errors.message.taken')],
-    product.errors[:title]
+    assert_equal [I18n.translate('errors.messages.taken')],
+                  product.errors[:title]
+  end
+
+  test "product title is at least 10 characters" do
+    product = Product.new(title:        "this is at least 10",
+                          description:  "yyy",
+                          price:        1,
+                          image_url:    "url.jpg")
+    assert product.valid?
+
+    product.title = 'not 10'
+    assert product.invalid?
   end
 end
