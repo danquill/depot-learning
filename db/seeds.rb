@@ -50,3 +50,8 @@ Product.create!(title: 'Rails Test Prescriptions',
       </p>},
   image_url: 'rtp.jpg',
   price: 34.95)
+
+Product.create!(title: 'DVD Rewinder',
+  description: "Rewinds DVDs, a must have in all tech-savvy households.",
+  image_url: 'dvd.jpg',
+  price: 24.99)
