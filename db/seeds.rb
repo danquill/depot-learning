@@ -52,6 +52,9 @@ Product.create!(title: 'Rails Test Prescriptions',
   price: 34.95)
 
 Product.create!(title: 'DVD Rewinder',
-  description: "Rewinds DVDs, a must have in all tech-savvy households.",
+  description:
+  %{<p>
+    Rewinds DVDs, a must have in all tech-savvy households!
+  </p>},
   image_url: 'dvd.jpg',
   price: 24.99)
